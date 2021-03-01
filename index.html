@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Clip path tranforms effects</title>
+</head>
+<body>
+    <h3>Scroll Down</h3>
+    <h2 class="text">Scroll to see the below content</h2>
+    <section>
+        <h2 class="innerText">Scroll to see the below content</h2>
+    </section>
+    <div class="container">
+        <h2>See more below</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis sint saepe quasi deleniti porro dolorem vero numquam voluptas excepturi tempore? Eaque rerum quaerat error odit sunt quod, exercitationem repudiandae consectetur aut, accusamus porro pariatur dolorum incidunt accusantium ullam magni aspernatur. Laborum ut labore delectus ipsam sequi hic atque praesentium nam pariatur excepturi, iusto nostrum. Doloribus magnam odio numquam, necessitatibus quisquam saepe eius non repellat impedit voluptate aspernatur maiores similique accusamus neque. Quibusdam, optio sunt saepe officiis asperiores maiores adipisci, earum porro cumque aliquam inventore. Quam doloribus reiciendis harum voluptate laborum inventore exercitationem error atque tempora ab quis aspernatur, a nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit provident, nesciunt accusamus non accusantium aliquam possimus ad natus iste aut quibusdam sunt minus dolores labore beatae, id veritatis, totam corrupti! Dolorem ullam assumenda soluta recusandae tempore beatae sed voluptatem dolores dolore. Nobis cum consequuntur hic blanditiis, eligendi, enim optio obcaecati porro soluta nostrum reprehenderit! Incidunt aliquid voluptate fuga fugiat consectetur veritatis accusamus dicta possimus! Voluptatem nulla architecto soluta inventore in odit, autem adipisci molestias. Amet, assumenda nemo! Aliquid vel voluptate obcaecati consequuntur optio! Veniam, ad quo. Incidunt, nisi! Sint rerum cum, deserunt ullam quisquam repellat cumque enim eligendi ratione facere.</p>
+    </div>
+
+    <script>
+        let section = document.querySelector('section');
+        let text = document.querySelector('.text');
+        let innerText = document.querySelector('.innerText');
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            section.style.clipPath = "circle("+ value +"px at center center)";
+            text.style.left = 100 - value/5 + "%";
+            innerText.style.left = 100 -value/5 + "%";
+
+        })
+    </script>
+</body>
+</html>
